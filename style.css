@@ -9,6 +9,8 @@
     --transition-dur: .2s;
     transition-duration: var(--transition-dur);
 
+    --glow: 0 0 0.3rem var(--text);
+
     scroll-behavior: smooth;
 }
 
@@ -126,10 +128,13 @@ header {
 .button {
     border: .1rem solid var(--text);
     border-radius: .25rem;
-    padding: .2rem .4rem;
-    margin: 1rem 0;
+    padding: .1rem .4rem;
     font-weight: bold;
     transition-duration: var(--transition-dur);
+}
+
+.button:hover {
+    box-shadow: var(--glow);
 }
 
 footer {
@@ -159,7 +164,7 @@ footer::before{
 }
 
 .footer-wrapper > a {
-    margin: 0 .4rem;
+    margin: 0 .8rem;
     transition-duration: var(--transition-dur);
 }
 
