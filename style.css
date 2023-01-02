@@ -1,0 +1,117 @@
+:root{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 470;
+    font-size: 1.3em;
+
+    --text: #093428;
+    --background: #54E2B8;
+    --accent: #E2547E;
+
+    --transition-dur: .2s;
+    transition-duration: var(--transition-dur);
+}
+
+@media screen and (max-width: 600px) {
+    :root{
+        font-size: 1em;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    background: var(--background);
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.header-main{
+    font-size: 10rem;
+    font-weight: 900;
+    margin: 2.2rem 1.4rem;
+}
+
+.header-sub{
+    font-size: 1.8rem;
+    font-weight: 600;
+    max-width: 20em;
+}
+
+.section {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    max-width: 65rem;
+    margin-top: 4rem;
+    padding: 1rem;
+    border-left: .2rem solid var(--text);
+}
+
+.section > .header {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section > .block {
+    margin-top: 1rem;
+    line-height: 175%;
+}
+
+.button {
+    border: .1rem solid var(--text);
+    border-radius: .25rem;
+    padding: .2rem .4rem;
+    margin: 1rem 0;
+    font-weight: 550;
+    transition-duration: var(--transition-dur);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    font-size: 2.2rem;
+    background: var(--background);
+}
+
+footer::before{
+    position: absolute;
+    bottom: 3rem;
+    content: "";
+    width: 100%;
+    height: 1.8rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--background) 100%);
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-wrapper > a {
+    margin: 0 .4rem;
+    transition-duration: var(--transition-dur);
+}
+
+.footer-wrapper > a:hover {
+    scale: 1.07;
+    margin: 0 .5rem;
+}
