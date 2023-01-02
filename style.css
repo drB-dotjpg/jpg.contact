@@ -20,6 +20,10 @@
     header {
         font-size: .75em;
     }
+
+    .header-name-wrapper > *{
+        margin: 1rem 0 !important;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,6 +68,7 @@ header {
     border: .2rem solid var(--text);
     border-radius: 1rem;
     margin-top: 1.95em;
+    margin-left: 1.4rem;
 }
 
 .header-main{
@@ -76,6 +81,7 @@ header {
 }
 
 .header-sub{
+    display: flex;
     font-size: 1.8em;
     font-weight: 600;
     max-width: 20em;
@@ -94,7 +100,7 @@ header {
 }
 
 .section > .header {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
 }
 
@@ -106,9 +112,6 @@ header {
 .block > .header {
     font-size: 2em;
     font-weight: 600;
-}
-
-.more-space {
     margin-top: 2.5rem;
 }
 
