@@ -12,19 +12,30 @@
     --glow: 0 0 0.3rem var(--text);
 
     scroll-behavior: smooth;
+
+    overflow-y: scroll;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     :root{
         font-size: 1em;
     }
 
+    body{
+        padding-bottom: 24rem !important;
+    }
+
     header {
         font-size: .75em;
+        flex-direction: column;
     }
 
     .header-name-wrapper > *{
         margin: 1rem 0 !important;
+    }
+
+    .nav-button.selected {
+        transform: none !important;
     }
 }
 
@@ -96,17 +107,24 @@ header {
 .nav-bar {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     max-width: 55rem;
     margin: 3em 0;
 }
 
 .nav-button {
+    white-space: nowrap;
     border: .2rem solid var(--text);
     font-weight: 600;
     font-size: 2em;
     padding: .25em .5em;
-    margin: 0 .25em;
-    transition-duration: var(--transition-dur);
+    margin: .25em;
+    transition-duration: calc(var(--transition-dur) * 2);
+}
+
+.nav-button.selected {
+    transform: translateY(1rem);
 }
 
 .nav-button.selected, .nav-button:hover {
@@ -140,6 +158,7 @@ header {
     font-size: 2em;
     font-weight: 600;
     margin-top: 2.5rem;
+    line-height: 2.5rem
 }
 
 .media {
@@ -152,8 +171,8 @@ header {
 
 .button {
     border: .1rem solid var(--text);
-    border-radius: .25rem;
-    padding: .1rem .4rem;
+    border-radius: .1rem;
+    padding: .1rem .2rem;
     font-weight: bold;
     transition-duration: var(--transition-dur);
 }
