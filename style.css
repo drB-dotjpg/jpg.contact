@@ -88,6 +88,7 @@ header {
     font-weight: 600;
     max-width: 20em;
     padding: .5rem;
+    line-height: 130%;
     background: var(--text);
     color: var(--background);
 }
