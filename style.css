@@ -129,6 +129,7 @@ header {
     padding: .25em .5em;
     margin: .25em;
     transition-duration: calc(var(--transition-dur) * 2);
+    user-select: none;
 }
 
 .nav-button.selected {
@@ -202,6 +203,7 @@ header {
     width: fit-content;
     font-weight: 600;
     transition-duration: var(--transition-dur);
+    user-select: none;
 }
 
 .works-button:hover{

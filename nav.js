@@ -1,7 +1,13 @@
 const navButtons = document.querySelectorAll(".nav-button");
 const sectionTl = gsap.timeline();
 
-navButtons[0].click();
+for (var i = 0; i < navButtons.length; i++) {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has(navButtons[i].dataset.goTo)){
+        navButtons[i].click();
+        break;
+    }
+}
 
 function navOnClick(obj){
     const noAnim = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -56,6 +62,8 @@ function navOnClick(obj){
         duration: .5,
         ease: "power3.inOut"
     });
+
+    window.history.replaceState(null, null, "?" + obj.dataset.goTo);
 }
 
 function worksNavOnClick(obj){
