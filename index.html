@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
     <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66a42373e4.js" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="nav.js" defer></script>
 </head>
 <body>
@@ -19,21 +19,22 @@
             <img class="header-img" src="img/cutie.png" title="Photo credit: @inkfarer on Twitter." alt="Photo of .jpg">
             <div class="header-main">.jpg</div>
         </div>
-        <div class="header-sub" id="header-sub"></div>
-        <script>
-            const text = "Tournament organizer and production creator helping make Splatoon an even cooler esport ▌";
-            gsap.timeline({
-                repeat: -1
-            })
-            .to("#header-sub", {
-                innerText: text,
-                duration: .5
-            })
-            .to("#header-sub", {
-                innerText: text.substring(0, text.length-1),
-                duration: .5
-            });
-        </script>
+        <div class="header-sub" id="header-sub">
+            <script>
+                const text = "Tournament organizer and production creator helping make Splatoon an even cooler esport ▌";
+                gsap.timeline({
+                    repeat: -1
+                })
+                .to("#header-sub", {
+                    innerText: text,
+                    duration: .5
+                })
+                .to("#header-sub", {
+                    innerText: text.substring(0, text.length-1),
+                    duration: .5
+                });
+            </script>
+        </div>
     </header>
 
     <div class="nav-bar">
