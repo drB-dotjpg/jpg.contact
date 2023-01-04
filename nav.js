@@ -7,6 +7,9 @@ for (var i = 0; i < navButtons.length; i++) {
         navButtons[i].click();
         break;
     }
+    if (i == navButtons.length-1){
+        navButtons[0].click();
+    }
 }
 
 function navOnClick(obj){
