@@ -4,6 +4,22 @@ const sectionTl = gsap.timeline();
 navButtons[0].click();
 
 function navOnClick(obj){
+    const noAnim = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const animOutConfig = !noAnim ? {
+        height: 0,
+        paddingTop: 0,
+        paddingBottom: 0
+    }  : {
+        opacity: 0
+    };
+    const animInConfig = !noAnim ? {
+        height: "auto",
+        paddingTop: 24,
+        paddingBottom: 48
+    } : {
+        opacity: 1
+    }
+
     if (obj.classList.contains("selected")){
         return;
     }
@@ -14,11 +30,9 @@ function navOnClick(obj){
 
             const sectionToClose = document.getElementById(navButtons[i].dataset.goTo)
             sectionTl.to(sectionToClose, {
-                height: 0,
+                ...animOutConfig,
                 ease: "power3.inOut",
                 duration: .5,
-                paddingTop: 0,
-                paddingBottom: 0,
                 onComplete: function() {
                     sectionToClose.style.display = "none";
                 }
@@ -30,17 +44,22 @@ function navOnClick(obj){
 
     const sectionToOpen = document.getElementById(obj.dataset.goTo);
     sectionTl.fromTo(sectionToOpen, {
-        height: 0,
+        height: !noAnim ? 0 : "auto",
+        opacity: noAnim ? 0 : 1,
         display: "block",
         borderBottomWidth: 0
     }, {
         onStart: function(){
             sectionToOpen.style.borderBottomWidth = ".2rem";
         },
-        height: "auto",
-        paddingTop: 24,
-        paddingBottom: 48,
+        ...animInConfig,
         duration: .5,
         ease: "power3.inOut"
     });
+}
+
+function worksNavOnClick(obj){
+    const elim = document.getElementById(obj.dataset.goTo);
+    console.log(elim);
+    elim.scrollIntoView();
 }

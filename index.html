@@ -20,17 +20,18 @@
         </div>
         <div class="header-sub" id="header-sub"></div>
         <script>
-            const headerSub = document.getElementById("header-sub");
-            function loop(){
-                headerSub.innerText = "Tournament organizer and production creator helping make Splatoon an even cooler esport ⠀";
-                setTimeout(() => {
-                    headerSub.innerText = "Tournament organizer and production creator helping make Splatoon an even cooler esport ▌";
-                    setTimeout(() => {
-                        loop();
-                    }, 600);
-                }, 600);
-            }
-            loop();
+            const text = "Tournament organizer and production creator helping make Splatoon an even cooler esport ▌";
+            gsap.timeline({
+                repeat: -1
+            })
+            .to("#header-sub", {
+                innerText: text,
+                duration: .5
+            })
+            .to("#header-sub", {
+                innerText: text.substring(0, text.length-1),
+                duration: .5
+            });
         </script>
     </header>
 
@@ -72,7 +73,17 @@
 
     <div class="section" id="notable-works">
         <div class="header">Notable Works</div>
-        <div class="block">
+        <div class="works-index block">
+            <div class="works-button" data-go-to="IPL" onclick="worksNavOnClick(this)">Inkling Performance Labs</div>
+            <div class="works-button" data-go-to="LI" onclick="worksNavOnClick(this)">Low Ink</div>
+            <div class="works-button" data-go-to="PG" onclick="worksNavOnClick(this)">Proving Grounds Production</div>
+            <div class="works-button" data-go-to="SOS" onclick="worksNavOnClick(this)">Swim or Sink Redesign Production</div>
+            <div class="works-button" data-go-to="mapsiplabs" onclick="worksNavOnClick(this)">maps.iplabs.ink</div>
+            <div class="works-button" data-go-to="streamhighlight" onclick="worksNavOnClick(this)">IPL Stream Highlighter</div>
+            <div class="works-button" data-go-to="questionabletournaments" onclick="worksNavOnClick(this)">.jpg's Questionable Tournaments</div>
+            <div class="works-button" data-go-to="HI" onclick="worksNavOnClick(this)">High Ink</div>
+        </div>
+        <div class="block" id="IPL">
             <div class="header">Inkling Performance Labs</div>
             <div class="block"><i>(August 2020 - Head TO as of today)</i></div>
             <div class="block">Inkling Performance Labs' goal is to unite and grow the community by creating high-quality Splatoon tournaments. We want to promote the growth of Splatoon, both in working to bring in new members, along with helping improve those already in the community.</div>
@@ -81,7 +92,7 @@
             <div class="block">Learn more at <nobr><a class="button" href="https://iplabs.ink/"><i class="fa-solid fa-link"></i> iplabs.ink</a></nobr></div>
             <div class="block"><img class="media" src="img/riptidegroup.jpg"></div>
         </div>
-        <div class="block">
+        <div class="block" id="LI">
             <div class="header">Low Ink</div>
             <div class="block"><i>(Begun staffing 2019 - Head TO as of today)</i></div>
             <div class="block">Low Ink is a two day Splatoon 3 tournament for newer and lower level players. Our goal is to give teams a chance to get into the Splatoon 3 tournament scene and gain valuable competitive experience. This is achieved by barring higher-level teams from playing in this event. Each team is checked over manually to ensure they are at a suitable skill to play. Low Ink has had multiple events with more than 100 teams and is considered one of the biggest tournaments in the scene.</div>
@@ -89,33 +100,33 @@
             <div class="block">Learn more about Low Ink at it's website (which I've created!) <nobr><a class="button" href="https://lowink.iplabs.ink/"><i class="fa-solid fa-link"></i> lowink.iplabs.ink</a></nobr></div>
             <div class="block"><img class="media" src="img/lowink.png" title="Art credit: @Ozeikin on Twitter"></div>
         </div>
-        <div class="block">
+        <div class="block" id="PG">
             <div class="header">Proving Grounds Production</div>
             <div class="block"><i>(October 2022 - Maintained today)</i></div>
             <div class="block">Proving Grounds, the sequel to a past IPL tournament named Testing Grounds, is a bi-weekly Splatoon tournament taking place on Friday nights. It includes a small map pool and a format catered to top level play.</div>
             <div class="block">My job was to handle all the production needs for this event. I've created nearly all the graphics (not the logo) seen in advertising as well as the stream overlay. The main challenge was how fast we wanted to get PG out the door, since demand for tournaments was at an all time high. I only had a couple days to get the production ready.</div>
             <div class="block"><video class="media" src="img/pg.mp4" autoplay muted loop></video></div>
         </div>
-        <div class="block">
+        <div class="block" id="SOS">
             <div class="header">Swim or Sink Redesign Production</div>
             <div class="block"><i>(September 2022 - Maintained today)</i></div>
             <div class="block">Swim or Sink is a weekly tournament series aimed at providing players with practice against other teams of varying skill levels. SOS has been running since the creation of IPL, and it was due for a redesign.</div>
             <div class="block">This was the project that taught me a lot of the production skills I have today. I've created all the graphics (not the logo) you see on social media and the stream overlay.</div>
             <div class="block"><video class="media" src="img/sos.mp4" autoplay muted loop></video></div>
         </div>
-        <div class="block">
+        <div class="block" id="mapsiplabs">
             <div class="header">maps.iplabs.ink</div>
             <div class="block"><i>(April 2022 - Maintained today)</i></div>
             <div class="block">Creating Splatoon tournament map lists is a headache, and I strongly dislike doing it by hand. I knew I wasn't the only one with this opinion. After numerous past projects trying to create an automated map generator, I've finally perfected the algorithm to create nearly perfect map lists, ending error-prone hand-made map lists in IPL. <nobr><a class="button" href="https://maps.iplabs.ink/"><i class="fa-solid fa-link"></i> maps.iplabs.ink</a></nobr></div>
             <div class="block"><img class="media" src="img/mapsiplabs.png"></div>
         </div>
-        <div class="block">
+        <div class="block" id="streamhighlight">
             <div class="header">IPL Stream Highlighter</div>
             <div class="block"><i>(December 2021 - Maintained today)</i></div>
             <div class="block">To boost social media engagement, I want to create a way to quickly put tournament clips on the IPL twitter. My solution was to create a discord bot that could take a Twitch clip and convert it into a downloadable video file with our branding added to it. With the help of this tool, any tournament organizer in IPL can take a moment from our livestream and put it on social media in about 1 minute.</div>
             <div class="block"><img class="media" src="img/highlighter.png"></div>
         </div>
-        <div class="block">
+        <div class="block" id="questionabletournaments">
             <div class="header">.jpg's Questionable Tournaments</div>
             <div class="block"><i>(January 2021 - January 2022)</i></div>
             <div class="block">My questionable tournaments were an experiment to try out the weirdest tournament format ideas I could think of. In the year this project was active, I ran the following:</div>
@@ -126,7 +137,7 @@
             <div class="block">.jpg's questionable tournaments stopped running due to oversaturation in tournaments in the Splatoon scene. Events with unusual formats also stopped being unique. I want to bring back this project, but it's not a high priority.</div>
             <div class="block"><video class="media" src="img/questionable.mp4" autoplay muted loop></video></div>
         </div>
-        <div class="block">
+        <div class="block" id="HI">
             <div class="header">High Ink</div>
             <div class="block"><i>(December 2020 & December 2021)</i></div>
             <div class="block">High Ink was an idea to bring back past winners of Low Ink in one special production. Its end goal within IPL was to test the limits of our production in one big event. My job was to ensure we had open communication with all the teams we invited and to create trailers of them on social media to create hype.</div>
