@@ -28,6 +28,7 @@
     header {
         font-size: .75em;
         flex-direction: column;
+        align-items: center !important;
     }
 
     .header-name-wrapper > *{
