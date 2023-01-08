@@ -4,15 +4,15 @@ const sectionTl = gsap.timeline();
 for (var i = 0; i < navButtons.length; i++) {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has(navButtons[i].dataset.goTo)){
-        navButtons[i].click();
+        navOnClick(navButtons[i], false);
         break;
     }
     if (i == navButtons.length-1){
-        navButtons[0].click();
+        navOnClick(navButtons[0], false);
     }
 }
 
-function navOnClick(obj){
+function navOnClick(obj, changeURL = true){
     const noAnim = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const animOutConfig = !noAnim ? {
         height: 0,
@@ -66,7 +66,9 @@ function navOnClick(obj){
         ease: "power3.inOut"
     });
 
-    window.history.replaceState(null, null, "?" + obj.dataset.goTo);
+    if (changeURL){
+        window.history.replaceState(null, null, "?" + obj.dataset.goTo);
+    }
 }
 
 function worksNavOnClick(obj){
