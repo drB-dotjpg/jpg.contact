@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&600&family=Syne:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -20,9 +20,9 @@
 
         h1 {
             font-family: 'Syne', sans-serif;
-            font-size: 96px;
+            font-size: calc(3vw + 16px);
             text-align: center;
-            color: #E7AE47;
+            color: white;
             width: 100%;
             border-bottom: dashed 4px #E7AE47;
             margin-top: 150px;
@@ -30,8 +30,9 @@
 
         .label {
             font-family: 'Inter', sans-serif;
-            font-size: 64px;
+            font-size: calc(2vw + 16px);
             color: white;
+            font-weight: 600;
         }
 
         .background {
@@ -39,7 +40,7 @@
             height: 100%;
             position: fixed;
             background-image: url('fordesign/background.png');
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-attachment: fixed;
             background-position: center;
             z-index: -1;
@@ -47,9 +48,35 @@
             scale: 1.1;
         }
 
+        .box {
+            padding: 2em;
+            border-radius: 6px;
+            background: #73242A;
+            max-width: calc(1920px - 400px - 2em);
+            filter: drop-shadow(0 0 64px #FACA6F16);
+        }
+
+        .box > .main {
+            font-family: 'Inter', sans-serif;
+            font-size: calc(1vw + 16px);
+            color: white;
+            font-weight: 600;
+        }
+
+        .box > .sub {
+            font-family: 'Inter', sans-serif;
+            font-size: calc(.8vw + 14px);
+            color: #FACA6F;
+            font-weight: 400;
+        }
+
+        .box > .sub:not(:last-child) {
+            margin-bottom: .5em;
+        }
+
         .slide {
             width: 100%;
-            max-width: 1920px;
+            max-width: calc(1920px - 400px);
             height: auto;
             margin-top: 90px;
             outline: 2px solid #E7AE4733;
@@ -76,7 +103,23 @@
 
     <img class="background">
 
-    <img src="fordesign/header.svg" style="margin: -85px 0; width: 100%; max-width: 1920px;">
+    <img class="slide" src="fordesign/header.svg" style="outline: none;">
+
+    <div class="box">
+        <div class="main">Creating a strong and consistent brand for G&E.</div>
+        <div class="sub">Strong and consistent branding are key factors to how esports organizations can grow. I want this club to look AWESOME and for people’s first impressions of it to be amazing. I created a design guideline concept and will work with others to improve it if needed.
+            Years of esports production experience.</div>
+        <div class="main">Years of esports production experience.</div>
+        <div class="sub">I head the largest non-Nintendo Splatoon tournament, getting over 1000 players in our last event. I’ve run numerous other events both in person and online. I am running for design chair because many of the production skills I’ve learned can transfer to the G&E design chair roles. My previous relevant production work can be found on this page.</div>
+        <div class="main">Able to create quality livestream overlays.</div>
+        <div class="sub">I have experience making quality livestream overlays for esport environments. I will happily transfer my skills to improve the quality of the club’s livestreams. Example videos of my work can be found on this page.</div>
+        <div class="main">Plans to simplify graphics creation so anyone can help.</div>
+        <div class="sub">I use software that is free for students for all my work. I plan on making graphics creation possible through the creation of design templates and hands on tutorials with anyone who wants to help. Tools like figma allow collaborative graphics creation from any PC, and I plan on utilizing this. I can also automate the creation of simple graphics with discord bots that can make them with a simple command.</div>
+        <div class="main">I'm already getting to work.</div>
+        <div class="sub">Below are all the concepts I’ve created since I started running for this position. I’ve created a design guideline concept that I follow for a consistent brand identity. Don’t like the look of the brand? I will happily work with you to make it look better.</div>
+        <div class="main"></div>
+    </div>
+
 
     <h1>CLUB DESIGN CONCEPTS</h1>
     <img class="slide" src="fordesign/meow.svg">
@@ -106,6 +149,7 @@
 
         window.onload = function() {
             window.scrollTo(0, 0);
+            console.log('%cIf you\'re looking at this; yes, I can make my own websites too :)', 'color: lime; font-size: 30px; font-weight: bold;');
         }
     </script>
 </body>
