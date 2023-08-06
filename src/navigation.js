@@ -24,12 +24,14 @@ for (let i = 0; i < sections.length; i++) {
         end: "center top",
         onEnter: () => {
             element.classList.add("active");
+            gsap.to(sideBar, {scrollTo: { y: element, offsetY: screen.height/2.5} , duration: 0.3, ease: "power1.out"});
             const tl = gsap.timeline();
             tl.to(element, {y: 10, duration: 0.15, ease: "power1.in"});
             tl.to(element, {y: 0, duration: 0.15, ease: "power1.out"});
         },
         onEnterBack: () => {
             element.classList.add("active");
+            gsap.to(sideBar, {scrollTo: { y: element, offsetY: screen.height/2.5} , duration: 0.3, ease: "power1.out"});
             const tl = gsap.timeline();
             tl.to(element, {y: -10, duration: 0.15, ease: "power1.in"});
             tl.to(element, {y: 0, duration: 0.15, ease: "power1.out"});
