@@ -19,6 +19,10 @@ body {
     overflow-y: hidden;
 }
 
+a {
+    color: var(--text);
+}
+
 #sidebar {
     background: var(--text);
     color: var(--background);
@@ -30,20 +34,27 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 3rem 1.5rem;
+    padding: 0 1.5rem;
     position: relative;
     font-size: 1.5rem;
-    overflow-y: auto;
-    transition-duration: .2s;
+    overflow-y: scroll;
+    transition-duration: .3s;
+    scrollbar-width: none;
 }
 
-#sidebar::before{
+#sidebar::before {
     content: "jpg.contact";
     font-size: .8rem;
     font-weight: 400;
     color: var(--background);
     opacity: .8;
     margin-bottom: .5rem;
+    margin-top: 25vh;
+}
+
+#sidebar::after {
+    content: "";
+    margin-bottom: 25vh;
 }
 
 #sidebar > a {
@@ -57,6 +68,7 @@ body {
     line-height: 1em;
     text-align: right;
     transition-duration: .1s;
+    transform-origin: right;
 }
 
 #sidebar > a:hover {
@@ -74,7 +86,7 @@ body {
 }
 
 #sidebar > a.big:not(:first-child) {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 #sidebar > a.active {
@@ -82,6 +94,9 @@ body {
     padding-right: .8rem;
 }
 
+#sidebar::-webkit-scrollbar {
+    width: 0;
+}
 
 #page-content {
     width: -webkit-fill-available;
@@ -96,6 +111,18 @@ body {
     align-items: flex-start;
     overflow-y: scroll;
     scroll-behavior: smooth;
+}
+
+#page-content::-webkit-scrollbar {
+    width: .5rem;
+}
+
+#page-content::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+#page-content::-webkit-scrollbar-thumb {
+    background: var(--text);
 }
 
 #modal {
@@ -209,6 +236,29 @@ img, video {
     border-radius: .5em;
 }
 
+.socials-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+}
+
+.socials-wrapper > a {
+    color: var(--text);
+    text-decoration: none;
+    transition-duration: .1s;
+}
+
+.socials-wrapper > a:hover {
+    scale: 1.05;
+}
+
+.socials-wrapper > a:not(:last-child) {
+    margin-right: 1rem;
+}
+
 .mobile-nav{
     display: none;
 }
@@ -232,7 +282,12 @@ img, video {
     #page-content{
         padding: .5rem;
         width: calc(100vw - 1rem);
-        height: calc(100vh - 3rem);
+        height: calc(100vh - 3.5rem);
+    }
+
+    #page-content::after{
+        content: "";
+        margin-bottom: 1rem;
     }
 
     #sidebar{
@@ -244,17 +299,26 @@ img, video {
         margin: 0;
         align-items: center;
         z-index: 9;
-        transform: translate(-100%);
+        transform: translateY(100%);
+    }
+
+    #sidebar::after{
+        margin-bottom: 5rem;
+    }
+
+    #sidebar::before{
+        margin-top: 1rem;
     }
 
     #sidebar.visible{
-        transform: translate(0);
+        transform: translateY(0);
     }
 
     #sidebar > a{
         padding: .2rem;
         border-bottom: .12rem solid var(--background);
         text-align: center;
+        transform-origin: center;
     }
 
     #sidebar > a.active {
