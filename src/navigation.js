@@ -1,4 +1,5 @@
 const sideBar = document.querySelector('#sidebar');
+const pageContent = document.querySelector('#page-content');
 const sections = document.querySelectorAll('.section');
 
 for (let i = 0; i < sections.length; i++) {
@@ -23,9 +24,15 @@ for (let i = 0; i < sections.length; i++) {
         end: "center top",
         onEnter: () => {
             element.classList.add("active");
+            const tl = gsap.timeline();
+            tl.to(element, {y: 10, duration: 0.15, ease: "power1.in"});
+            tl.to(element, {y: 0, duration: 0.15, ease: "power1.out"});
         },
         onEnterBack: () => {
             element.classList.add("active");
+            const tl = gsap.timeline();
+            tl.to(element, {y: -10, duration: 0.15, ease: "power1.in"});
+            tl.to(element, {y: 0, duration: 0.15, ease: "power1.out"});
         },
         onLeave: () => {
             element.classList.remove("active");
@@ -33,13 +40,14 @@ for (let i = 0; i < sections.length; i++) {
         onLeaveBack: () => {
             element.classList.remove("active");
         }
+        
     });
 }
 
 function scrollToId(id){
     sideBar.classList.remove("visible");
     const element = document.getElementById(id);
-    element.scrollIntoView({behavior: "smooth"});
+    pageContent.scroll(0, element.offsetTop - (element.offsetHeight / 5));
 }
 
 function toggleBottomNav(){
