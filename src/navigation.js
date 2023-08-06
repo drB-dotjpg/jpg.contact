@@ -37,6 +37,11 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 function scrollToId(id){
+    sideBar.classList.remove("visible");
     const element = document.getElementById(id);
-    element.scrollIntoView({behavior: "smooth", block: "center"});
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+function toggleBottomNav(){
+    sideBar.classList.toggle("visible");
 }
