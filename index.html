@@ -1,167 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="description" content=".jpg is a member of the Splatoon community looking to make the scene better through quality tournaments and productions.">
-    <title>contact .jpg</title>
+    <meta name="description" content=".jpg creates esports designs and productions.">
+    <title>jpg.contact</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
     <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66a42373e4.js" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="nav.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="src/navigation.js" defer></script>
+    <script src="src/image.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <div class="header-name-wrapper">
-            <img class="header-img" src="img/cutie.png" title="Photo credit: @inkfarer on Twitter." alt="Photo of .jpg">
-            <div class="header-main">.jpg</div>
-        </div>
-        <div class="header-sub" id="header-sub">
-            <script>
-                const text = "Tournament organizer and production creator helping make Splatoon an even cooler esport ▌";
-                gsap.timeline({
-                    repeat: -1
-                })
-                .to("#header-sub", {
-                    innerText: text,
-                    duration: .5
-                })
-                .to("#header-sub", {
-                    innerText: text.substring(0, text.length-1),
-                    duration: .5
-                });
-            </script>
-        </div>
-    </header>
-
-    <div class="nav-bar">
-        <div class="nav-button" data-go-to="about" onclick="navOnClick(this)">About</div>
-        <div class="nav-button" data-go-to="contact" onclick="navOnClick(this)">Contact</div>
-        <div class="nav-button" data-go-to="notable-works" onclick="navOnClick(this)">Notable Works</div>
+    <div id="sidebar" class="">
     </div>
+    <div id="page-content">
+        <div class="header">
+            <div class="flex-row">
+                <img src="img/photoOf.jpg" alt="photo of jpg" class="header-photo no-modal">
+                <div class="name-text">.jpg</div>
+            </div>
+            <div class="subheader">Esports production and design.</div>
+        </div>
 
-    <div class="section" id="about">
-        <div class="header">About</div>
-        <div class="block">
-            I've been playing Splatoon since the first game launched and instantly fell in love. After the launch of Splatoon 2 in 2018, I decided to explore the scene more. I formed a team named Assault and Pepper, officially entering the competitive Splatoon scene as a player.
+        <div class="section big">
+            <div class="title">About</div>
+            <div class="content">
+                <div>
+                    My name is .jpg, and I create esport designs and productions for numerous organizations. I’ve been
+                    working in esports as a hobby for over 4 years. I’ve organized major tournaments in the past, but
+                    nowadays I focus most of my time on creating awesome looking productions through design and code. I
+                    also create tools to help streamline processes in an esports production. While I mainly reside in
+                    the competitive Splatoon community, I’m branching out and creating productions for more games such
+                    as Super Smash Bros, Overwatch, Valorant, and much more! The organizations I specifically work with
+                    are Inkling Performance Labs, Level1, and the Gaming and Esports Club at ISU.
+                </div>
+            </div>
         </div>
-        <div class="block">
-            I stopped playing with Assault and Pepper in 2020 to pursue tournament organizing around the launch of a new tournament and production organization named Inkling Performance Labs. It was built off the success of a tourney named Low Ink, one of my favorite events to play, and I started staffing in after winning in July 2019. I got promoted from staff to head TO a couple of months after.
+        <div class="section">
+            <div class="title">Contact</div>
+            <div class="content">
+                <div>
+                    Feel free to reach out if you’re interested in working with me, or if you just want some production
+                    questions answered!
+                </div>
+                <div>
+                    My twitter messages are typically open: @PlayLowInk
+                    <br>If not, find me on Discord: .jpg.jpg
+                    <br>If all else fails, try my email out: jpg@iplabs.ink
+                </div>
+            </div>
         </div>
-        <div class="block">
-            As Inkling Performance Labs grows, our production ambitions grow too. We're running both more major and more frequent tournaments. We're also starting to enter the realm of helping in-person events. I'm doing my part by helping with some of the production work the organization needs alongside the tourney organizing I typically handle. Most of the work I put into this scene is with Inkling Performance Labs, check us out at <nobr><a class="button" href="https://iplabs.ink/"><i class="fa-solid fa-link"></i> iplabs.ink</a></nobr>
+        <div class="section big">
+            <div class="title">Inkling Performance Labs</div>
+            <div class="content">
+                Inkling Performance Labs is a competitive Splatoon tournament and production organization. Its goal is
+                to unite and grow the community by creating high quality Splatoon tournaments. We want to promote the
+                growth of Splatoon, both in working to bring in new members, along with helping improve those already in
+                the community. I’ve been with IPL since it’s inception for both tournament organizing, design, and
+                production.
+            </div>
         </div>
-        <div class="block"><img class="media" src="img/lowinkatltc.jpg" title="From the Low Tide City 2022 stream." alt="Image from the Low Tide City livestream. .jpg in the front of the camera with people standing behind holding a sign saying play in Low Ink, lowink.iplabs.ink to learn more."></div>
+        <div class="section">
+            <div class="title">Proving Grounds</div>
+            <div class="content">
+                <div>
+                    October 2022 - Maintained today
+                    <br>My role: Design & Livestream Overlay.
+                </div>
+                <div>
+                    Proving Grounds, the sequel to a past IPL tournament named Testing Grounds, is a bi-weekly Splatoon
+                    tournament taking place on Friday nights. It includes a small map pool and a format catered to top
+                    level play. My job was to handle all the production needs for this event. I've created nearly all
+                    the graphics (not the logo) seen in advertising as well as the stream overlay. The main challenge
+                    was how fast we wanted to get PG out the door, since demand for tournaments was at an all time high.
+                    I only had a couple days to get the production ready.
+                </div>
+                <div class="flex-row">
+                    <video src="/img/pg.mp4" autoplay muted loop></video>
+                    <img src="/img/pgad.png" alt="Proving grounds ad">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">Swim or Sink</div>
+            <div class="content">
+                <div>
+                    September 2022 - Maintained today
+                    <br>My role: Redesign tournament & Create new livestream overlays
+                </div>
+                <div>
+                    Swim or Sink is a weekly tournament series aimed at providing players with practice against other
+                    teams of varying skill levels. SOS has been running since the creation of IPL, and it was due for a
+                    redesign. This was the project that taught me a lot of the production skills I have today. I've
+                    created all the graphics (not the logo) you see on social media and the stream overlay.
+                </div>
+                <div class="flex-row">
+                    <video src="/img/sos.mp4" autoplay muted loop></video>
+                    <img src="/img/sosad.png" alt="Swim or Sink ad">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">maps.iplabs.ink</div>
+            <div class="content">
+                <div>
+                    April 2022 - Maintained today
+                    <br>My role: Creation of website
+                </div>
+                <div>
+                    Creating Splatoon tournament map lists is a headache, and I strongly dislike doing it by hand. I
+                    knew I wasn't the only one with this opinion. After numerous past projects trying to create an
+                    automated map generator, I've finally perfected the algorithm to create nearly perfect map lists,
+                    ending error-prone hand-made map lists in IPL. <a href="https://maps.iplabs.ink">maps.iplabs.ink</a>
+                </div>
+                <div class="flex-row">
+                    <img src="img/mapsiplabs.png" alt="Image of maps.iplabs.ink">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">IPL Media Creator</div>
+            <div class="content">
+                <div>
+                    December 2021 - Maintained today
+                    <br>My role: Creation of bot and its assets.
+                </div>
+                <div>
+                    To boost social media engagement, I want to create a way to quickly put tournament clips on the IPL
+                    twitter. My solution was to create a discord bot that could take a Twitch clip and convert it into a
+                    downloadable video file with our branding added to it. With the help of this tool, any tournament
+                    organizer in IPL can take a moment from our livestream and put it on social media in about 1 minute.
+                </div>
+                <div>
+                    In January 2023, I added the ability to create graphics instantly using a collection of simple
+                    commands. Thanks to this, no software or previous graphic design experience is needed to create
+                    graphics for IPL events.
+                </div>
+                <div class="flex-row">
+                    <img src="img/highlighter.png" alt="Image of IPL Media Creator being used in Discord">
+                </div>
+            </div>
+            <div class="section">
+                <div class="title">Low Ink</div>
+                <div class="content">
+                    <div>
+                        Begun staffing 2019 - Stepped down from Head TO position in June 2023
+                        Past roles: Head Tournament Organizer & Various Graphics.
+                        Current Role: Advisor for new leadership & Livestreamer.
+                    </div>
+                    <div>
+                        Low Ink is a two day Splatoon 3 tournament for newer and lower level players. Our goal is to
+                        give teams a chance to get into the Splatoon 3 tournament scene and gain valuable competitive
+                        experience. This is achieved by barring higher-level teams from playing in this event. Each team
+                        is checked over manually to ensure they are at a suitable skill to play. Low Ink has had
+                        multiple events with more than 100 teams and is considered one of the biggest tournaments in the
+                        scene.
+                    </div>
+                    <div>
+                        Learn more about Low Ink at its website (which I've created!) <a
+                            href="https://lowink.iplabs.ink/">lowink.iplabs.ink</a>
+                    </div>
+                    <div class="flex-row">
+                        <img src="img/lowink.jpg" alt="Low Ink’s banner">
+                        <img src="img/liwebsite.png" alt="Image of Low Ink website">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="section">
+            <div class="title"></div>
+            <div class="content">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div> -->
+        </div>
     </div>
-
-    <div class="section" id="contact">
-        <div class="header">Contact</div>
-        <div class="block">If you need to reach out to me, I'm always happy to talk. While I mainly reside in the Splatoon scene, I keep an open mind about working in other gaming communities. If you have an idea and want my help, lets get in touch!</div>
-        <div class="block">
-            Direct Messages on my Twitter are usually open. This is typically the easiest way to reach me.&nbsp;
-            <nobr><a class="button" href="https://twitter.com/PlayLowInk"><i class="fa-brands fa-twitter"></i> PlayLowInk on Twitter</a></nobr>
-        </div>
-        <div class="block">
-            For more formal inquiries, you're welcome to email me at&nbsp;
-            <nobr><a class="button" href="mailto:jpg@iplabs.ink"><i class="fa-solid fa-envelope"></i> jpg@iplabs.ink</a></nobr>
-        </div>
-        <div class="block">
-            The last option is Discord, this option isn't as prefered as the others. Find me on Discord as <nobr><b><i class="fa-brands fa-discord"></i> .jpg#8000</b></nobr>.
-        </div>
+    <div id="modal">
+        <img class="no-modal modal-image" src="" alt="">
+        <video class="no-modal modal-image" src="" autoplay muted loop></video>
     </div>
-
-    <div class="section" id="notable-works">
-        <div class="header">Notable Works</div>
-        <div class="works-index block">
-            <div class="works-button" data-go-to="IPL" onclick="worksNavOnClick(this)">Inkling Performance Labs</div>
-            <div class="works-button" data-go-to="LI" onclick="worksNavOnClick(this)">Low Ink</div>
-            <div class="works-button" data-go-to="brackets" onclick="worksNavOnClick(this)">IPL Brackets</div>
-            <div class="works-button" data-go-to="PG" onclick="worksNavOnClick(this)">Proving Grounds Production</div>
-            <div class="works-button" data-go-to="SOS" onclick="worksNavOnClick(this)">Swim or Sink Redesign Production</div>
-            <div class="works-button" data-go-to="mapsiplabs" onclick="worksNavOnClick(this)">maps.iplabs.ink</div>
-            <div class="works-button" data-go-to="streamhighlight" onclick="worksNavOnClick(this)">IPL Stream Highlighter</div>
-            <div class="works-button" data-go-to="questionabletournaments" onclick="worksNavOnClick(this)">.jpg's Questionable Tournaments</div>
-            <div class="works-button" data-go-to="HI" onclick="worksNavOnClick(this)">High Ink</div>
-        </div>
-        <div class="block" id="IPL">
-            <div class="header">Inkling Performance Labs</div>
-            <div class="block"><i>(August 2020 - Head TO as of today)</i></div>
-            <div class="block">Inkling Performance Labs' goal is to unite and grow the community by creating high-quality Splatoon tournaments. We want to promote the growth of Splatoon, both in working to bring in new members, along with helping improve those already in the community.</div>
-            <div class="block">I've been with IPL since its inception. While I mainly run the event Low Ink, I get involved in all events in some capacity. I do the usual tournament organizing a lot, but recently I've been helping create production assets for lots of events, which involves small things like graphics for our Twitter posts to full-on livestream graphics packages.</div>
-            <div class="block">IPL is full of great talent and even greater people. We're constantly striving to push the scene forward both in online and in-person events. Below is an image of all IPL staff and commentators who were at Riptide 2022.</div>
-            <div class="block">Learn more at <nobr><a class="button" href="https://iplabs.ink/"><i class="fa-solid fa-link"></i> iplabs.ink</a></nobr></div>
-            <div class="block"><img class="media" src="img/riptidegroup.jpg" alt="A picture of all the IPL staff and commentators who visited Riptide 2022. A group of around 30 people posing for the camera."></div>
-        </div>
-        <div class="block" id="LI">
-            <div class="header">Low Ink</div>
-            <div class="block"><i>(Begun staffing 2019 - Head TO as of today)</i></div>
-            <div class="block">Low Ink is a two day Splatoon 3 tournament for newer and lower level players. Our goal is to give teams a chance to get into the Splatoon 3 tournament scene and gain valuable competitive experience. This is achieved by barring higher-level teams from playing in this event. Each team is checked over manually to ensure they are at a suitable skill to play. Low Ink has had multiple events with more than 100 teams and is considered one of the biggest tournaments in the scene.</div>
-            <div class="block">I am a head tournament organizer of Low Ink alongside two good friends. This means I typically oversee the event both on the days of the event and the days leading up to it.</div>
-            <div class="block">Learn more about Low Ink at it's website (which I've created!) <nobr><a class="button" href="https://lowink.iplabs.ink/"><i class="fa-solid fa-link"></i> lowink.iplabs.ink</a></nobr></div>
-            <div class="block"><img class="media" src="img/lowink.jpg" title="Art credit: @Ozeikin on Twitter" alt="Offical Low Ink artwork. Two inklings cheering each other on next to the Low Ink logo."></div>
-        </div>
-        <div class="block" id="brackets">
-            <div class="header">IPL Brackets</div>
-            <div class="block"><i>(January 2023 - Maintained today)</i></div>
-            <div class="block">IPL Brackets is an internal tool for IPL streamers. It allows streamers to show the status of the tournament bracket on stream while maintaining the strong branding our events hold. It supports graphics for Low Ink, Swim or Sink, Proving Grounds, and Splatoon Advanced Circuit. It features animations upon switching scenes through OBS and auto refreshes the bracket status.</div>
-            <div class="block"><video class="media" src="img/brackets.mp4" autoplay muted loop></video></div>
-        </div>
-        <div class="block" id="PG">
-            <div class="header">Proving Grounds Production</div>
-            <div class="block"><i>(October 2022 - Maintained today)</i></div>
-            <div class="block">Proving Grounds, the sequel to a past IPL tournament named Testing Grounds, is a bi-weekly Splatoon tournament taking place on Friday nights. It includes a small map pool and a format catered to top level play.</div>
-            <div class="block">My job was to handle all the production needs for this event. I've created nearly all the graphics (not the logo) seen in advertising as well as the stream overlay. The main challenge was how fast we wanted to get PG out the door, since demand for tournaments was at an all time high. I only had a couple days to get the production ready.</div>
-            <div class="block"><video class="media" src="img/pg.mp4" autoplay muted loop></video></div>
-        </div>
-        <div class="block" id="SOS">
-            <div class="header">Swim or Sink Redesign Production</div>
-            <div class="block"><i>(September 2022 - Maintained today)</i></div>
-            <div class="block">Swim or Sink is a weekly tournament series aimed at providing players with practice against other teams of varying skill levels. SOS has been running since the creation of IPL, and it was due for a redesign.</div>
-            <div class="block">This was the project that taught me a lot of the production skills I have today. I've created all the graphics (not the logo) you see on social media and the stream overlay.</div>
-            <div class="block"><video class="media" src="img/sos.mp4" autoplay muted loop></video></div>
-        </div>
-        <div class="block" id="mapsiplabs">
-            <div class="header">maps.iplabs.ink</div>
-            <div class="block"><i>(April 2022 - Maintained today)</i></div>
-            <div class="block">Creating Splatoon tournament map lists is a headache, and I strongly dislike doing it by hand. I knew I wasn't the only one with this opinion. After numerous past projects trying to create an automated map generator, I've finally perfected the algorithm to create nearly perfect map lists, ending error-prone hand-made map lists in IPL. <nobr><a class="button" href="https://maps.iplabs.ink/"><i class="fa-solid fa-link"></i> maps.iplabs.ink</a></nobr></div>
-            <div class="block"><img class="media" src="img/mapsiplabs.png" alt="An image of the user interface of maps.iplabs.ink"></div>
-        </div>
-        <div class="block" id="streamhighlight">
-            <div class="header">IPL Media Creator</div>
-            <div class="block"><i>Formerly IPL Highlight Generator (December 2021 - Maintained today)</i></div>
-            <div class="block">To boost social media engagement, I want to create a way to quickly put tournament clips on the IPL twitter. My solution was to create a discord bot that could take a Twitch clip and convert it into a downloadable video file with our branding added to it. With the help of this tool, any tournament organizer in IPL can take a moment from our livestream and put it on social media in about 1 minute.</div>
-            <div class="block">In January 2023, I've added the ability to create graphics instantly using a collection of simple commands. Thanks to this, no software or previous graphic design experience is needed to create graphics for IPL events.</div>
-            <div class="block"><img class="media" src="img/highlighter.png" src="An image showing off the functionality of the IPL stream highlighter, showing a video being generated from a Low Ink stream."></div>
-        </div>
-        <div class="block" id="questionabletournaments">
-            <div class="header">.jpg's Questionable Tournaments</div>
-            <div class="block"><i>(January 2021 - January 2022)</i></div>
-            <div class="block">My questionable tournaments were an experiment to try out the weirdest tournament format ideas I could think of. In the year this project was active, I ran the following:</div>
-            <div class="block">• <b>Fastest Event in the West</b> (January 10, 2021): A best-of-1, single-elimination event. It lasted about 30 minutes.<br>
-                • <b>Mission Composition</b> (January 24, 2021): An event that has teams face off with entirely random weapon compositions.<br>
-                • <b>Waiting On Our 5th</b> (February 24, 2021): Teams in this event have a spectator on their team to feed them more info than they'd usually get.<br>
-                • <b>Fastest Event in the West 2</b> (January 22, 2022): It was not faster than the first one.</div>
-            <div class="block">.jpg's questionable tournaments stopped running due to oversaturation in tournaments in the Splatoon scene. Events with unusual formats also stopped being unique. I want to bring back this project, but it's not a high priority.</div>
-            <div class="block"><video class="media" src="img/questionable.mp4" autoplay muted loop></video></div>
-        </div>
-        <div class="block" id="HI">
-            <div class="header">High Ink</div>
-            <div class="block"><i>(December 2020 & December 2021)</i></div>
-            <div class="block">High Ink was an idea to bring back past winners of Low Ink in one special production. Its end goal within IPL was to test the limits of our production in one big event. My job was to ensure we had open communication with all the teams we invited and to create trailers of them on social media to create hype.</div>
-            <div class="block">High Ink 2 was similar to the original High Ink. It had the same goal of pushing the limits of our production with trailers of all teams and an awesome stream with some of the best casters in the scene.</div>
-            <div class="block">Both High Inks were very time-consuming to produce. I'm proud of how both turned out in the end. However, I am not interested in creating a 3rd event.</div>
-            <div class="block"><video class="media" src="img/lowtohighink.mp4" autoplay muted loop></video></div>
-        </div>
+    <div class="mobile-nav" onclick="toggleBottomNav()">
+        <i class="fa-solid fa-bars"></i>
     </div>
+</body>
 
-    <footer>
-        <div class="footer-wrapper">
-            <a href="https://twitter.com/PlayLowInk" title=".jpg aka PlayLowInk on Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.twitch.tv/jpg_ffd8ff" title=".jpg aka jpg_ffd8ff on Twitch"><i class="fa-brands fa-twitch"></i></a>
-            <a href="https://github.com/drB-dotjpg" title=".jpg aka drB-dotjpg on GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
 </html>
