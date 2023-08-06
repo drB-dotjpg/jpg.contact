@@ -37,13 +37,23 @@ body {
     transition-duration: .2s;
 }
 
+#sidebar::before{
+    content: "jpg.contact";
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--background);
+    opacity: .8;
+    margin-bottom: .5rem;
+}
+
 #sidebar > a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
     transition-duration: .1s;
-    margin: .4rem 0;
+    padding: .3rem 0;
+    margin: .1rem 0;
     line-height: 1em;
     text-align: right;
     transition-duration: .1s;
@@ -54,7 +64,7 @@ body {
 }
 
 #sidebar > a:active {
-    transform: scale(.95);
+    transform: scale(.95) !important;
 }
 
 
@@ -85,6 +95,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 #modal {
