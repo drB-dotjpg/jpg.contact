@@ -224,11 +224,11 @@ a {
     margin-bottom: 1rem;
 }
 
-img:not(.no-modal), video:not(.no-modal) {
+img:not(.no-modal), video:not(.no-modal), iframe:not(.no-modal) {
     cursor: pointer;
 }
 
-img, video {
+img, video, iframe {
     max-height: 13rem;
     max-width: 40rem;
     object-fit: cover;
