@@ -42,7 +42,7 @@ function showImageModal(src, alt, type){
         background: "#000000A0",
         "backdrop-filter": "blur(12px)",
         duration: 0.3,
-        ease: "power2.out"
+        ease: "power2.in"
     });
     gsap.fromTo(target, 
         {
@@ -59,7 +59,7 @@ function showImageModal(src, alt, type){
             scale: 1,
             filter: "blur(0px)",
             duration: 0.3,
-            ease: "power2.out"
+            ease: "power2.in"
         }
     );
 }

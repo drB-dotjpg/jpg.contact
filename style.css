@@ -224,11 +224,11 @@ a {
     font-size: .2em;
     font-weight: 600;
     margin-top: .2em;
+    margin-bottom: .2em;
     padding: .5rem 1rem;
     background: var(--background);
     color: var(--text);
 }
-
 
 .section:not(:last-child){
     margin-bottom: 3rem;
@@ -282,8 +282,13 @@ img, video, iframe {
     max-height: 13rem;
     max-width: 40rem;
     object-fit: cover;
-    border: .3rem solid var(--text);
-    border-radius: .5em;
+    border: .2rem solid var(--text);
+    transition-duration: .2s;
+    position: relative;
+}
+
+img:not(.no-modal):hover, video:not(.no-modal):hover, iframe:not(.no-modal):hover {
+    transform: scale(1.02);
 }
 
 .socials-wrapper {
