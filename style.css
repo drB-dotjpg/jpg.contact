@@ -30,6 +30,7 @@ a {
     min-height: 97vh;
     width: 22vw;
     margin: 1.5vh 1.5vw;
+    margin-right: 0;
     min-width: 400px;
     display: flex;
     flex-direction: column;
@@ -41,8 +42,6 @@ a {
     overflow-y: scroll;
     transition-duration: .3s;
     scrollbar-width: none;
-    transform: translate(.25rem, .25rem);
-    filter: drop-shadow(-.5rem -.5rem 0 var(--text));
 }
 
 #sidebar::before {
@@ -96,9 +95,20 @@ a {
     padding: .5rem;
     background: var(--background);
     color: var(--text);
-    filter: drop-shadow(-.5rem .25rem 0 var(--background));
-    margin: .35rem 0;
+    margin: .4rem 0;
     font-weight: 700;
+    position: relative;
+}
+
+#sidebar > a.active::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - .2rem);
+    height: calc(100% - .2rem);
+    top: .4rem;
+    left: -.4rem;
+    border: .1rem solid var(--background);
+    z-index: -1;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -183,7 +193,19 @@ a {
     border: .25rem solid var(--text);
     background: var(--text);
     color: var(--background);
-    filter: drop-shadow(1rem 1rem 0 var(--text));
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - .4rem);
+    height: calc(100% - .4rem);
+    top: 1rem;
+    left: 1rem;
+    border: .2rem solid var(--text);
+    background: var(--background);
+    z-index: -1;
 }
 
 .name-text {
@@ -216,17 +238,36 @@ a {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    margin-left: .5rem;
     background: var(--text);
     color: var(--background);
     padding: 1rem;
-    filter: drop-shadow(.5rem .5rem 0 var(--text));
     width: fit-content;
+    position: relative;
+}
+
+.section > .title::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - .4rem);
+    height: calc(100% - .4rem);
+    top: .5rem;
+    left: -.5rem;
+    border: .2rem solid var(--text);
+    background: var(--background);
+    z-index: -1;
 }
 
 .section.big > .title {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
     font-weight: 700;
     line-height: 1em;
+    margin-left: 1rem;
+}
+
+.section.big > .title::before {
+    top: 1rem;
+    left: -1rem;
 }
 
 .section > .content > div:not(:last-child) {
@@ -255,7 +296,7 @@ img, video, iframe {
 }
 
 .socials-wrapper > a {
-    color: var(--text);
+    color: var(--background );
     text-decoration: none;
     transition-duration: .1s;
 }
@@ -325,14 +366,12 @@ img, video, iframe {
 
     #sidebar > a{
         padding: .2rem;
-        border-bottom: .12rem solid var(--background);
         text-align: center;
         transform-origin: center;
     }
 
     #sidebar > a.active {
         padding: .5rem;
-        filter: drop-shadow(-.25rem .25rem 0 var(--background));
     }
     
     .section > .title::after {
