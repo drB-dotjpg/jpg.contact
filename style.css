@@ -26,9 +26,10 @@ a {
 #sidebar {
     background: var(--text);
     color: var(--background);
-    height: 100vh;
-    min-height: 100vh;
-    width: 25vw;
+    height: 97vh;
+    min-height: 97vh;
+    width: 22vw;
+    margin: 1.5vh 1.5vw;
     min-width: 400px;
     display: flex;
     flex-direction: column;
@@ -40,6 +41,8 @@ a {
     overflow-y: scroll;
     transition-duration: .3s;
     scrollbar-width: none;
+    transform: translate(.25rem, .25rem);
+    filter: drop-shadow(-.5rem -.5rem 0 var(--text));
 }
 
 #sidebar::before {
@@ -90,8 +93,12 @@ a {
 }
 
 #sidebar > a.active {
-    border-right: .2rem solid var(--background);
-    padding-right: .8rem;
+    padding: .5rem;
+    background: var(--background);
+    color: var(--text);
+    filter: drop-shadow(-.5rem .25rem 0 var(--background));
+    margin: .35rem 0;
+    font-weight: 700;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -172,6 +179,11 @@ a {
 .header {
     font-size: 8rem;
     margin-bottom: 4rem;
+    padding: 1rem;
+    border: .25rem solid var(--text);
+    background: var(--text);
+    color: var(--background);
+    filter: drop-shadow(1rem 1rem 0 var(--text));
 }
 
 .name-text {
@@ -183,14 +195,16 @@ a {
     width: 1em;
     height: 1em;
     object-fit: cover;
-    border: .04em solid var(--text);
     border-radius: .1em;
 }
 
 .subheader {
-    font-size: .3em;
+    font-size: .2em;
     font-weight: 600;
-    margin-top: 0.5em;
+    margin-top: .2em;
+    padding: .5rem 1rem;
+    background: var(--background);
+    color: var(--text);
 }
 
 
@@ -201,23 +215,18 @@ a {
 .section > .title {
     font-size: 2.2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--text);
+    color: var(--background);
+    padding: 1rem;
+    filter: drop-shadow(.5rem .5rem 0 var(--text));
+    width: fit-content;
 }
 
 .section.big > .title {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1em;
-    margin-bottom: 1rem;
-}
-
-.section > .title::after {
-    content: "";
-    display: block;
-    width: calc(100% + 1.5rem);
-    height: .2rem;
-    transform: translateX(-1.5rem);
-    background: var(--text);
 }
 
 .section > .content > div:not(:last-child) {
@@ -322,8 +331,8 @@ img, video, iframe {
     }
 
     #sidebar > a.active {
-        padding-right: .2rem;
-        border-right: none;
+        padding: .5rem;
+        filter: drop-shadow(-.25rem .25rem 0 var(--background));
     }
     
     .section > .title::after {
@@ -343,7 +352,7 @@ img, video, iframe {
         font-size: 5.5rem;
     }
 
-    img, video {
+    img, video, iframe {
         max-height: 100vh;
         max-width: 100vw;
         width: calc(100% - .6rem);
