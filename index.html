@@ -19,6 +19,15 @@
 </head>
 
 <body>
+    <svg style="display: none;">
+        <filter id='noiseFilter'>
+            <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+            <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+            <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+        </filter>
+    </svg>
+    <div class="background"></div>
     <div id="sidebar" class=""></div>
     <div id="page-content">
         <div class="header">
@@ -31,7 +40,8 @@
                 <a href="https://twitter.com/PlayLowInk" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://bsky.app/profile/jpg-is.online" target="_blank" title="This one is bluesky, by the way">
+                <a href="https://bsky.app/profile/jpg-is.online" target="_blank"
+                    title="This one is bluesky, by the way">
                     <i class="fa-solid fa-cloud"></i>
                 </a>
                 <a href="https://github.com/drB-dotjpg" target="_blank">
@@ -44,7 +54,9 @@
             <div class="title">About</div>
             <div class="content">
                 <div>
-                    My name is .jpg, and I create esport designs and productions for numerous organizations. I’ve been working in esports as a hobby for more than four years. I’ve organized major tournaments in the past, but
+                    My name is .jpg, and I create esport designs and productions for numerous organizations. I’ve been
+                    working in esports as a hobby for more than four years. I’ve organized major tournaments in the
+                    past, but
                     nowadays I focus most of my time on creating awesome looking productions through design and code. I
                     also create tools to help streamline processes in an esports production. While I mainly reside in
                     the competitive Splatoon community, I’m branching out and creating productions for more games such
@@ -71,9 +83,12 @@
             <div class="title">Inkling Performance Labs</div>
             <div class="content">
                 <div>
-                    Inkling Performance Labs is a competitive Splatoon tournament and production organization. Its goal is
-                    to unite and grow the community by creating high quality Splatoon tournaments. We want to promote the
-                    growth of Splatoon, both in working to bring in new members, along with helping improve those already in
+                    Inkling Performance Labs is a competitive Splatoon tournament and production organization. Its goal
+                    is
+                    to unite and grow the community by creating high quality Splatoon tournaments. We want to promote
+                    the
+                    growth of Splatoon, both in working to bring in new members, along with helping improve those
+                    already in
                     the community. I’ve been with IPL since it’s inception for tournament organizing, design, and
                     production.
                 </div>
@@ -84,7 +99,8 @@
                     <a href="https://twitter.com/iplSplatoon" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://bsky.app/profile/iplabs.ink" target="_blank" title="This one is bluesky, by the way">
+                    <a href="https://bsky.app/profile/iplabs.ink" target="_blank"
+                        title="This one is bluesky, by the way">
                         <i class="fa-solid fa-cloud"></i>
                     </a>
                     <a href="https://www.twitch.tv/iplsplatoon" target="_blank">
@@ -107,12 +123,18 @@
                     <br>My role: Production lead
                 </div>
                 <div>
-                    IPL VS is a Splatoon exhibition match production. Two teams are invited to battle live on our Twitch in a best of 9 with counterpicks set. Featuring quality match-ups, the best casters, and a detailed packed stream.
+                    IPL VS is a Splatoon exhibition match production. Two teams are invited to battle live on our Twitch
+                    in a best of 9 with counterpicks set. Featuring quality match-ups, the best casters, and a detailed
+                    packed stream.
                 </div>
                 <div class="flex-row">
                     <img src="img/iplvs.png" alt="IPL VS teaser">
                     <video src="img/iplvsanimations.mp4" autoplay muted loop></video>
-                    <iframe class="no-modal" width="560" height="315" src="https://www.youtube.com/embed/rWJAOdxxThI?si=lBsEDiFU0LcY2Vpp&amp;start=423" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="no-modal" width="560" height="315"
+                        src="https://www.youtube.com/embed/rWJAOdxxThI?si=lBsEDiFU0LcY2Vpp&amp;start=423"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -230,7 +252,10 @@
             <div class="title">Level1</div>
             <div class="content">
                 <div>
-                    Level1 is a production company based in the northwest of the US. They specialize in livestreaming in-person fighting game tournaments, primarily Super Smash Bros. and other platform fighters. I’ve known people from Level1 for years and I’ve worked with them on some productions, but now, they’re starting to come to me for freelance work!
+                    Level1 is a production company based in the northwest of the US. They specialize in livestreaming
+                    in-person fighting game tournaments, primarily Super Smash Bros. and other platform fighters. I’ve
+                    known people from Level1 for years and I’ve worked with them on some productions, but now, they’re
+                    starting to come to me for freelance work!
                 </div>
                 <div class="socials-wrapper">
                     <a href="https://level1.tv/" target="_blank">
@@ -242,7 +267,8 @@
                     <a href="https://twitter.com/Level1_tv" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://bsky.app/profile/level1.tv" target="_blank" title="This one is bluesky, by the way">
+                    <a href="https://bsky.app/profile/level1.tv" target="_blank"
+                        title="This one is bluesky, by the way">
                         <i class="fa-solid fa-cloud"></i>
                     </a>
                     <a href="https://www.youtube.com/@Level1_TV" target="_blank">
@@ -259,13 +285,19 @@
             <div class="content">
                 <div>
                     May 2023
-                    <br>My role: Creation of livestream graphic sources from preexisting concepts. Connected those graphics to respond to inputs from a dashboard, which was created by another team.
+                    <br>My role: Creation of livestream graphic sources from preexisting concepts. Connected those
+                    graphics to respond to inputs from a dashboard, which was created by another team.
                 </div>
                 <div>
-                    I was hired by Level1 to create livestream graphics for the Canadian Smash Major, Battle of BC 5. I was given concepts on what the graphics should look like. My role was to take these concepts, and turn them into an actual overlay that will work in OBS. These graphics had to respond to dashboard inputs and update accordingly to the data provided. In total, I had to create about 13 different scenes.
+                    I was hired by Level1 to create livestream graphics for the Canadian Smash Major, Battle of BC 5. I
+                    was given concepts on what the graphics should look like. My role was to take these concepts, and
+                    turn them into an actual overlay that will work in OBS. These graphics had to respond to dashboard
+                    inputs and update accordingly to the data provided. In total, I had to create about 13 different
+                    scenes.
                 </div>
                 <div>
-                    This project meant a lot to me. I got into esports through smash, so it was amazing to finally work on a major smash production. I hope to do more in the future.
+                    This project meant a lot to me. I got into esports through smash, so it was amazing to finally work
+                    on a major smash production. I hope to do more in the future.
                 </div>
                 <div class="flex-row">
                     <img src="img/bobc5break.png" alt="Break scene from the Battle of BC 5 stream">
@@ -279,7 +311,10 @@
             <div class="title">Gaming and Esports Club at ISU</div>
             <div class="content">
                 <div>
-                    The Gaming and Esports Club at ISU is a student run organization which specializes in managing a variety of esports teams and hosting on campus events for anyone interested in gaming. For the 2023-2024 academic year, I was elected to be the design chair for the club. I’ll be creating numerous graphics and livestream overlays for the club throughout the year.
+                    The Gaming and Esports Club at ISU is a student run organization which specializes in managing a
+                    variety of esports teams and hosting on campus events for anyone interested in gaming. For the
+                    2023-2024 academic year, I was elected to be the design chair for the club. I’ll be creating
+                    numerous graphics and livestream overlays for the club throughout the year.
                 </div>
                 <div class="socials-wrapper">
                     <a href="https://twitter.com/GamingISU" target="_blank">
@@ -311,10 +346,15 @@
                     <br>My role: Create livestream overlays and graphics. Run the livestream and its related tech.
                 </div>
                 <div>
-                    Every year around Halloween, GE will run a charity stream with a variety of games. Members of the club are welcome to join the event, hosted in the ISU gaming and esports room. People are encouraged to donate through fun incentives!
+                    Every year around Halloween, GE will run a charity stream with a variety of games. Members of the
+                    club are welcome to join the event, hosted in the ISU gaming and esports room. People are encouraged
+                    to donate through fun incentives!
                 </div>
                 <div>
-                    For 2023, we ran a 2 day stream with half the stream online and the other half in the ISU gaming and esports room. Alongside the graphics all coded by me, I was in charge of handing tech for getting donations on stream and getting people's computer feed to the stream using an RTMP server. We raised $5,445.69 for Games For Love.
+                    For 2023, we ran a 2 day stream with half the stream online and the other half in the ISU gaming and
+                    esports room. Alongside the graphics all coded by me, I was in charge of handing tech for getting
+                    donations on stream and getting people's computer feed to the stream using an RTMP server. We raised
+                    $5,445.69 for Games For Love.
                 </div>
                 <div class="flex-row">
                     <img src="img/gecharity4.jpg" alt="Charity stream 2023">
@@ -332,7 +372,9 @@
                     <br>My role: Creation of livestream overlays and graphics. Occasionally run the livestream.
                 </div>
                 <div>
-                    Tempest is a weekly smash tournament hosted by the Gaming and Esports Club at ISU and Ames Smash. I've created the livestream overlays and graphics for this event, which is implimented in the GE livestream overlay hub for all the club's streamers to access.
+                    Tempest is a weekly smash tournament hosted by the Gaming and Esports Club at ISU and Ames Smash.
+                    I've created the livestream overlays and graphics for this event, which is implimented in the GE
+                    livestream overlay hub for all the club's streamers to access.
                 </div>
                 <div class="flex-row">
                     <img src="img/tempestbreak.png" alt="Break screen for Tempest">
@@ -349,11 +391,13 @@
                     <br>My role: Creation of the overlays.
                 </div>
                 <div>
-                    To improve branding across all GE player’s livestreams, I’ve created a very easy to use, browser based source to add your name and social media to your livestream. The package comes with a “card scene” which can be overlaid on your gameplay, and a break scene for when you’re on break.
+                    To improve branding across all GE player’s livestreams, I’ve created a very easy to use, browser
+                    based source to add your name and social media to your livestream. The package comes with a “card
+                    scene” which can be overlaid on your gameplay, and a break scene for when you’re on break.
                 </div>
                 <div class="flex-row">
                     <img src="img/geplayeroverlaybreak.png" alt="GE player overlay break scene">
-                    <img src="img/geplayeroverlaymain.png" alt="GE player overlay card scene">  
+                    <img src="img/geplayeroverlaymain.png" alt="GE player overlay card scene">
                 </div>
             </div>
         </div>

@@ -3,16 +3,17 @@
     font-weight: 470;
     font-size: 1.5em;
 
-    --text: #093428;
-    --background: #54E2B8;
+    --text: #0C4535;
+    --text-dark: #06231B;
+    --background: #A8F0DA;
+    --background-dark: #1EAE83;
 
-    --glow: var(--text) 0 0 0.3rem;
-    --glow-dark: var(--background) 0 0 0.3rem;
+    --glow: var(--text) 0 0 1rem;
+    --glow-dark: var(--background) 0 0 1rem;
 
 }
 
 body {
-    background: var(--background);
     color: var(--text);
     display: flex;
     margin: 0;
@@ -24,7 +25,7 @@ a {
 }
 
 #sidebar {
-    background: var(--text);
+    background: linear-gradient(120deg, var(--text) 0%, var(--text-dark) 100%);
     color: var(--background);
     height: 97vh;
     min-height: 97vh;
@@ -71,6 +72,7 @@ a {
     text-align: right;
     transition-duration: .1s;
     transform-origin: right;
+    filter: url(#noiseFilter);
 }
 
 #sidebar > a:hover {
@@ -98,6 +100,7 @@ a {
     margin: .4rem 0;
     font-weight: 700;
     position: relative;
+    filter: none;
 }
 
 #sidebar > a.active::before {
@@ -189,9 +192,8 @@ a {
 .header {
     font-size: 8rem;
     margin-bottom: 4rem;
-    padding: 1rem;
-    border: .25rem solid var(--text);
-    background: var(--text);
+    padding: 2rem; 
+    background: linear-gradient(120deg, var(--text) 0%, var(--text-dark) 100%);
     color: var(--background);
     position: relative;
 }
@@ -239,7 +241,7 @@ a {
     font-weight: 600;
     margin-bottom: 1.5rem;
     margin-left: .5rem;
-    background: var(--text);
+    background: linear-gradient(120deg, var(--text) 0%, var(--text-dark) 100%);
     color: var(--background);
     padding: 1rem;
     width: fit-content;
@@ -254,7 +256,6 @@ a {
     top: .5rem;
     left: -.5rem;
     border: .2rem solid var(--text);
-    background: var(--background);
     z-index: -1;
 }
 
@@ -333,7 +334,7 @@ img:not(.no-modal):hover, video:not(.no-modal):hover, iframe:not(.no-modal):hove
         width: 100vw;
         height: 3rem;
         font-size: 2.5rem;
-        background: var(--text);
+        background: linear-gradient(120deg, var(--text) 0%, var(--text-dark) 100%);
         color: var(--background);
         z-index: 10;
     }
@@ -431,4 +432,16 @@ img:not(.no-modal):hover, video:not(.no-modal):hover, iframe:not(.no-modal):hove
         line-height: 1em;
         margin-bottom: 1rem;
     }
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    --deg: 120deg;
+    background: linear-gradient(var(--deg), var(--background) 0%, var(--background-dark) 100%);
+    z-index: -1;
+    filter: url(#noiseFilter);
 }

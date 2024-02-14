@@ -2,6 +2,19 @@ const sideBar = document.querySelector('#sidebar');
 const pageContent = document.querySelector('#page-content');
 const sections = document.querySelectorAll('.section');
 
+ScrollTrigger.create({
+    scroller: pageContent,
+    onUpdate: self => {
+        const height = pageContent.scrollHeight;
+        const progress = self.progress;
+        const deg = (progress * height) / 20 + 120;
+        console.log(progress, deg);
+        gsap.set(".background", {
+            "--deg": `${deg}deg`
+        });
+    }
+});
+
 for (let i = 0; i < sections.length; i++) {
     const section = sections[i];
     const element = document.createElement('a');
