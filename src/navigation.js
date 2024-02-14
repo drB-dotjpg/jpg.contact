@@ -8,7 +8,6 @@ ScrollTrigger.create({
         const height = pageContent.scrollHeight;
         const progress = self.progress;
         const deg = (progress * height) / 20 + 120;
-        console.log(progress, deg);
         gsap.set(".background", {
             "--deg": `${deg}deg`
         });

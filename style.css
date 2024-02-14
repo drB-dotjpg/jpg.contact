@@ -24,6 +24,18 @@ a {
     color: var(--text);
 }
 
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    --deg: 120deg;
+    background: linear-gradient(var(--deg), var(--background) 0%, var(--background-dark) 100%);
+    z-index: -1;
+    filter: url(#noiseFilter);
+}
+
 #sidebar {
     background: linear-gradient(120deg, var(--text) 0%, var(--text-dark) 100%);
     color: var(--background);
@@ -399,6 +411,8 @@ img:not(.no-modal):hover, video:not(.no-modal):hover, iframe:not(.no-modal):hove
 
     .header {
         font-size: 5.5rem;
+        padding: 1rem;
+        max-width: 70dvw;
     }
 
     img, video, iframe {
@@ -423,25 +437,13 @@ img:not(.no-modal):hover, video:not(.no-modal):hover, iframe:not(.no-modal):hove
     .section > .title {
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .section.big > .title {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1em;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    --deg: 120deg;
-    background: linear-gradient(var(--deg), var(--background) 0%, var(--background-dark) 100%);
-    z-index: -1;
-    filter: url(#noiseFilter);
 }
