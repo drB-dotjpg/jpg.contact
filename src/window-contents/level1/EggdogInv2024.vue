@@ -7,7 +7,7 @@
             inputs from a dashboard.</p>
         <p>The Eggdog Invitational was a four-day event featuring 16 of the best Super Smash Bros. Melee players in the
             world hosted August 29th to September 1st, 2024 in Richmond, BC, Canada.</p>
-        <p>I was hired to impliment the graphics for this event. It was nothing I couldn't handle, but the real
+        <p>I was hired to implement the graphics for this event. It was nothing I couldn't handle, but the real
             challenge
             was the tight deadline. This event had a crazy turnaround time.</p>
         <p>
