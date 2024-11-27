@@ -16,8 +16,10 @@ import Sendouq from "./window-contents/ipl/Sendouq.vue";
 import SwimOrSink from "./window-contents/ipl/SwimOrSink.vue";
 import BattleOfBc5 from "./window-contents/level1/BattleOfBc5.vue";
 import BattleOfBc6 from "./window-contents/level1/BattleOfBc6.vue";
+import DPOTG2024 from "./window-contents/level1/DPOTG2024.vue";
 import EggdogInv2024 from "./window-contents/level1/EggdogInv2024.vue";
 import FullBloom2024 from "./window-contents/level1/FullBloom2024.vue";
+import LACSRivals from "./window-contents/level1/LACSRivals.vue";
 import SmashCamp2024 from "./window-contents/level1/SmashCamp2024.vue";
 import Riptide from "./window-contents/personal/Riptide.vue";
 
@@ -29,6 +31,16 @@ export const aboutWindow: CreationWindowType = {
 export const level1FolderWindow: CreationWindowType = {
     title: "Level 1 Projects",
     component: Level1Folder
+}
+
+export const lacsRivalsWindow: CreationWindowType = {
+    title: "LACS Rivals",
+    component: LACSRivals
+}
+
+export const dpotg2024Window: CreationWindowType = {
+    title: "Don't Park On The Grass 2024",
+    component: DPOTG2024
 }
 
 export const eggdogInv2024Window: CreationWindowType = {
