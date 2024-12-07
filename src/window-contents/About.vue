@@ -17,6 +17,7 @@
 
         <h2>Contact</h2>
         <p>Feel free to reach out if you’re interested in working with me, or if you just want some production questions answered!</p>
+        <p>Email at derek@level1.tv</p>
         <p>I'm on Discord as <b>.jpg.jpg</b></p>
         <p><a href="https://bsky.app/profile/jpg-is.online">Follow me on Bluesky (most active here!)</a></p>
         <p><a href="https://twitter.com/PlayLowInk">Follow me on Twitter</a></p>
