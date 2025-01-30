@@ -27,7 +27,7 @@ const windowStore = useWindowsStore();
 const contents: FolderContent[] = [
     {
         name: "IPL VS",
-        date: "Since October 2023",
+        date: "November 2022 - October 2023",
         onClick: () => {
             windowStore.addWindow(iplVsWindow);
         },
@@ -62,7 +62,7 @@ const contents: FolderContent[] = [
     },
     {
         name: "IPL Media Creator",
-        date: "Since December 2021",
+        date: "December 2021 - September 2024",
         onClick: () => {
             windowStore.addWindow(mediaCreatorWindow);
         },

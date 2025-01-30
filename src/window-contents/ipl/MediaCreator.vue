@@ -1,7 +1,7 @@
 <template>
     <div class="work-wrapper">
         <h1>IPL Media Creator</h1>
-        <h2>December 2021 - Maintained today</h2>
+        <h2>December 2021 - September 2024</h2>
         <p>My role: Creation of bot and its assets.</p>
         <p>To boost social media engagement, I want to create a way to quickly put tournament clips on the IPL twitter.
             My solution was to create a discord bot that could take a Twitch clip and convert it into a downloadable
