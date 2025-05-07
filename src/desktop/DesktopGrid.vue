@@ -12,6 +12,9 @@
         <DesktopIcon label="Gaming ISU" @double-clicked="windows.addWindow(gamingISUFolderWindow)">
             <Folder :size="48" />
         </DesktopIcon>
+        <DesktopIcon label="Splatoon Tourney" @double-clicked="windows.addWindow(splatoonTourneyFolderWindow)">
+            <Folder :size="48" />
+        </DesktopIcon>
         <DesktopIcon label="Personal" @double-clicked="windows.addWindow(personalFolderWindow)">
             <Folder :size="48" />
         </DesktopIcon>
@@ -22,7 +25,7 @@
 import { Folder, Info } from 'lucide-vue-next';
 import DesktopIcon from './DesktopIcon.vue';
 import { useWindowsStore } from '../stores/windowStore';
-import { aboutWindow, gamingISUFolderWindow, iplFolderWindow, level1FolderWindow, personalFolderWindow } from '../windows';
+import { aboutWindow, gamingISUFolderWindow, iplFolderWindow, level1FolderWindow, personalFolderWindow, splatoonTourneyFolderWindow } from '../windows';
 
 const windows = useWindowsStore();
 </script>

@@ -17,13 +17,20 @@
 <script setup lang="ts">
 import { useWindowsStore } from '../../stores/windowStore';
 import { FolderContent } from '../../types/FolderContent';
-import { battleOfBC5Window, battleOfBC6Window, dpotg2024Window, eggdogInv2024Window, fullBloom2024Window, lacsRivalsWindow, smashCamp2024Window } from '../../windows';
+import { battleOfBC5Window, battleOfBC6Window, dpotg2024Window, eggdogInv2024Window, fullBloom2024Window, lacsRivalsWindow, smashCamp2024Window, battleOfBC7Window } from '../../windows';
 import FolderBrowser from './FolderBrowser.vue';
 
 const windowStore = useWindowsStore();
 
 const contents: FolderContent[] = [
-{
+    {
+        name: "Battle of BC 7",
+        date: "March 2025",
+        onClick: () => {
+            windowStore.addWindow(battleOfBC7Window);
+        },
+    },
+    {
         name: "LACS Rivals",
         date: "October 2024 - November 2024",
         onClick: () => {
