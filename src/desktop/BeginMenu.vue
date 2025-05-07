@@ -17,6 +17,10 @@
             <Folder :size="32" />
             <span>Gaming ISU</span>
         </div>
+        <div class="button" @click="windows.addWindow(splatoonTourneyFolderWindow); emit('close')">
+            <Folder :size="32" />
+            <span>SplatoonTourney</span>
+        </div>
         <div class="button" @click="windows.addWindow(personalFolderWindow); emit('close')">
             <Folder :size="32" />
             <span>Personal</span>
@@ -32,7 +36,7 @@
 import { Folder, Info, Power } from 'lucide-vue-next';
 import { onMounted, onUnmounted } from 'vue';
 import { useWindowsStore } from '../stores/windowStore';
-import { aboutWindow, gamingISUFolderWindow, iplFolderWindow, level1FolderWindow, personalFolderWindow } from '../windows';
+import { aboutWindow, gamingISUFolderWindow, iplFolderWindow, level1FolderWindow, personalFolderWindow, splatoonTourneyFolderWindow } from '../windows';
 
 const windows = useWindowsStore();
 
